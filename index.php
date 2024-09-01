@@ -1,205 +1,438 @@
+
 <?php
-
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
- *
- * This can be set to anything, but default usage is:
- *
- *     development
- *     testing
- *     production
- *
- * NOTE: If you change these, also change the error_reporting() code below
- *
- */
-	define('ENVIRONMENT', 'production');
-/*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
- *
- * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
- */
-
-if (defined('ENVIRONMENT'))
+include_once('hms/include/config.php');
+if(isset($_POST['submit']))
 {
-	switch (ENVIRONMENT)
-	{
-		case 'development':
-			error_reporting(E_ALL);
-		break;
-	
-		case 'testing':
-		case 'production':
-			error_reporting(0);
-		break;
+$name=$_POST['fullname'];
+$email=$_POST['emailid'];
+$mobileno=$_POST['mobileno'];
+$dscrption=$_POST['description'];
+$query=mysqli_query($con,"insert into tblcontactus(fullname,email,contactno,message) value('$name','$email','$mobileno','$dscrption')");
+echo "<script>alert('Your information succesfully submitted');</script>";
+echo "<script>window.location.href ='index.php'</script>";
 
-		default:
-			exit('The application environment is not set correctly.');
-	}
-}
+} ?>
+<!doctype html>
+<html lang="en">
 
-/*
- *---------------------------------------------------------------
- * SYSTEM FOLDER NAME
- *---------------------------------------------------------------
- *
- * This variable must contain the name of your "system" folder.
- * Include the path if the folder is not in the same  directory
- * as this file.
- *
- */
-	$system_path = 'system';
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Hospital management System </title>
 
-/*
- *---------------------------------------------------------------
- * APPLICATION FOLDER NAME
- *---------------------------------------------------------------
- *
- * If you want this front controller to use a different "application"
- * folder then the default one you can set its name here. The folder
- * can also be renamed or relocated anywhere on your server.  If
- * you do, use a full server path. For more info please see the user guide:
- * http://codeigniter.com/user_guide/general/managing_apps.html
- *
- * NO TRAILING SLASH!
- *
- */
-	$application_folder = 'application';
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
 
-/*
- * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
- * --------------------------------------------------------------------
- *
- * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here.  For most applications, you
- * WILL NOT set your routing here, but it's an option for those
- * special instances where you might want to override the standard
- * routing in a specific front controller that shares a common CI installation.
- *
- * IMPORTANT:  If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller.  Leave the function name blank if you need
- * to call functions dynamically via the URI.
- *
- * Un-comment the $routing array below to use this feature
- *
- */
-	// The directory name, relative to the "controllers" folder.  Leave blank
-	// if your controller is not in a sub-folder within the "controllers" folder
-	// $routing['directory'] = '';
+    <body>
 
-	// The controller class file name.  Example:  Mycontroller
-	// $routing['controller'] = '';
+    <!-- ################# Header Starts Here#######################--->
+    
+      <header id="menu-jk">
+    
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3  col-sm-12" style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;">HMS
+                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about_us">About Us</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact_us">Contact Us</a></li>
+                            <li><a href="#logins">Logins</a></li>  
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 d-none d-lg-block appoint">
+                        <a class="btn btn-success" href="hms/user-login.php">Book an Appointment</a>
+                    </div>
+                </div>
 
-	// The controller function you wish to be called.
-	// $routing['function']	= '';
+            </div>
+        </div>
+    </header>
+    
+     <!-- ################# Slider Starts Here#######################--->
+
+    <div class="slider-detail">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
 
 
-/*
- * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
- * -------------------------------------------------------------------
- *
- * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
- * multiple front controller files, with each file containing different
- * config values.
- *
- * Un-comment the $assign_to_config array below to use this feature
- *
- */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+   
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item ">
+                    <img class="d-block w-100" src="assets/images/slider/slider_2.jpg" alt="Second slide">
+                    <div class="carousel-cover"></div>
+                    <div class="carousel-caption vdg-cur d-none d-md-block">
+                        <h5 class="animated bounceInDown">Hospital Management System</h5>
+            
+                         
+                    
+                    </div>
+                </div>
+                
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/images/slider/slider_3.jpg" alt="Third slide">
+                      <div class="carousel-cover"></div>
+                    <div class="carousel-caption vdg-cur d-none d-md-block">
+                        <h5 class="animated bounceInDown">Hospital Management System</h5>
+            
+                         
+                    
+                    </div>
+              
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+    </div>
+    
+  <!--  ************************* Logins ************************** -->
+    
+    
+     <section id="logins" class="our-blog container-fluid">
+        <div class="container">
+        <div class="inner-title">
+
+                <h2>Logins</h2>
+            </div>
+            <div class="col-sm-12 blog-cont">
+                <div class="row no-margin">
+                    <div class="col-sm-4 blog-smk">
+                        <div class="blog-single">
+
+                                <img src="assets/images/patient.jpg" alt="">
+
+                            <div class="blog-single-det">
+                                <h6>Patient Login</h6>
+                                <a href="hms/user-login.php" target="_blank">
+                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 blog-smk">
+                        <div class="blog-single">
+
+                                <img src="assets/images/doctor.jpg" alt="">
+
+                            <div class="blog-single-det">
+                                <h6>Doctors login</h6>
+                                <a href="hms/doctor" target="_blank">
+                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 blog-smk">
+                        <div class="blog-single">
+
+                                <img src="assets/images/admin.jpg" alt="">
+
+                            <div class="blog-single-det">
+                                <h6>Admin Login</h6>
+                    
+                                <a href="hms/admin" target="_blank">
+                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>  
 
 
 
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
-
-/*
- * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
- * ---------------------------------------------------------------
- */
-
-	// Set the current directory correctly for CLI requests
-	if (defined('STDIN'))
-	{
-		chdir(dirname(__FILE__));
-	}
-
-	if (realpath($system_path) !== FALSE)
-	{
-		$system_path = realpath($system_path).'/';
-	}
-
-	// ensure there's a trailing slash
-	$system_path = rtrim($system_path, '/').'/';
-
-	// Is the system path correct?
-	if ( ! is_dir($system_path))
-	{
-		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-	}
-
-/*
- * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
- * -------------------------------------------------------------------
- */
-	// The name of THIS file
-	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-
-	// The PHP file extension
-	// this global constant is deprecated.
-	define('EXT', '.php');
-
-	// Path to the system folder
-	define('BASEPATH', str_replace("\\", "/", $system_path));
-
-	// Path to the front controller (this file)
-	define('FCPATH', str_replace(SELF, '', __FILE__));
-
-	// Name of the "system folder"
-	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
 
-	// The path to the "application" folder
-	if (is_dir($application_folder))
-	{
-		define('APPPATH', $application_folder.'/');
-	}
-	else
-	{
-		if ( ! is_dir(BASEPATH.$application_folder.'/'))
-		{
-			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
-		}
 
-		define('APPPATH', BASEPATH.$application_folder.'/');
-	}
 
-/*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
- *
- * And away we go...
- *
- */
-require_once BASEPATH.'core/CodeIgniter.php';
+    <!-- ################# Our Departments Starts Here#######################--->
 
-/* End of file index.php */
-/* Location: ./index.php */
+
+    <section id="services" class="key-features department">
+        <div class="container">
+            <div class="inner-title">
+
+                <h2>Our Key Features</h2>
+                <p>Take a look at some of our key features</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                        <i class="fas fa-heartbeat"></i>
+                        <h5>Cardiology</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                        <i class="fas fa-ribbon"></i>
+                        <h5>Orthopaedic</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                       <i class="fab fa-monero"></i>
+                        <h5>Neurologist</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                        <i class="fas fa-capsules"></i>
+                        <h5>Pharma Pipeline</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <h5>Pharma Team</h5>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-key">
+                        <i class="far fa-thumbs-up"></i>
+                        <h5>High Quality treatments</h5>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </section>
+    
+    
+  
+    
+    <!--  ************************* About Us Starts Here ************************** -->
+        
+    <section id="about_us" class="about-us">
+        <div class="row no-margin">
+            <div class="col-sm-6 image-bg no-padding">
+                
+            </div>
+            <div class="col-sm-6 abut-yoiu">
+                <h3>About Our Hospital</h3>
+<?php
+$ret=mysqli_query($con,"select * from tblpage where PageType='aboutus' ");
+while ($row=mysqli_fetch_array($ret)) {
+?>
+
+    <p><?php  echo $row['PageDescription'];?>.</p><?php } ?>
+            </div>
+        </div>
+    </section>    
+    
+    
+            <!--  ************************* Gallery Starts Here ************************** -->
+        <div id="gallery" class="gallery">    
+           <div class="container">
+              <div class="inner-title">
+
+                <h2>Our Gallery</h2>
+                <p>View Our Gallery</p>
+            </div>
+              <div class="row">
+                
+
+        <div class="gallery-filter d-none d-sm-block">
+            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="hdpe">Dental</button>
+            <button class="btn btn-default filter-button" data-filter="sprinkle">Cardiology</button>
+            <button class="btn btn-default filter-button" data-filter="spray"> Neurology</button>
+            <button class="btn btn-default filter-button" data-filter="irrigation">Laboratry</button>
+        </div>
+        <br/>
+
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="assets/images/gallery/gallery_01.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_02.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="assets/images/gallery/gallery_03.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/images/gallery/gallery_04.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/images/gallery/gallery_05.jpg" class="img-responsive">
+            </div>
+
+          
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/images/gallery/gallery_06.jpg" class="img-responsive">
+            </div>
+
+        </div>
+    </div>
+       
+       
+       </div>
+        <!-- ######## Gallery End ####### -->
+    
+    
+     <!--  ************************* Contact Us Starts Here ************************** -->
+    
+    <section id="contact_us" class="contact-us-single">
+        <div class="row no-margin">
+
+            <div  class="col-sm-12 cop-ck">
+                <form method="post">
+                <h2 >Contact Form</h2>
+                    <div class="row cf-ro">
+                        <div  class="col-sm-3"><label>Enter Name :</label></div>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="fullname" class="form-control input-sm" required ></div>
+                    </div>
+                    <div  class="row cf-ro">
+                        <div  class="col-sm-3"><label>Email Address :</label></div>
+                        <div class="col-sm-8"><input type="text" name="emailid" placeholder="Enter Email Address" class="form-control input-sm"  required></div>
+                    </div>
+                     <div  class="row cf-ro">
+                        <div  class="col-sm-3"><label>Mobile Number:</label></div>
+                        <div class="col-sm-8"><input type="text" name="mobileno" placeholder="Enter Mobile Number" class="form-control input-sm" required ></div>
+                    </div>
+                     <div  class="row cf-ro">
+                        <div  class="col-sm-3"><label>Enter  Message:</label></div>
+                        <div class="col-sm-8">
+                          <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm" name="description" required></textarea>
+                        </div>
+                    </div>
+                     <div  class="row cf-ro">
+                        <div  class="col-sm-3"><label></label></div>
+                        <div class="col-sm-8">
+                         <button class="btn btn-success btn-sm" type="submit" name="submit">Send Message</button>
+                        </div>
+                </div>
+            </form>
+            </div>
+     
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <!-- ################# Footer Starts Here#######################--->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+       
+                <div class="col-md-6 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="portfolio" href="#services">Services</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="products" href="#logins">Logins</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="gallery" href="#gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+
+<?php
+$ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
+while ($row=mysqli_fetch_array($ret)) {
+?>
+
+
+                        <?php  echo $row['PageDescription'];?> <br>
+                        Phone: <?php  echo $row['MobileNumber'];?> <br>
+                        Email: <a href="mailto:<?php  echo $row['Email'];?>" class=""><?php  echo $row['Email'];?></a><br>
+                        Timing: <?php  echo $row['OpenningTime'];?>
+                    </address>
+
+        <?php } ?>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        
+
+    </footer>
+    <div class="copy">
+            <div class="container">
+         Hospital Management System
+                
+     
+            </div>
+
+        </div>
+    
+    </body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-nav/js/jquery.easing.min.js"></script>
+<script src="assets/plugins/scroll-nav/js/scrolling-nav.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+
+<script src="assets/js/script.js"></script>
+
+
+
+</html>
