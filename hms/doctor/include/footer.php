@@ -2,8 +2,8 @@
     <div class="footer-inner">
         <!-- Botão para voltar ao topo -->
         <div class="go-top-wrapper">
-            <span class="go-top"><i class="ti-angle-up"></i></span>
-        </div>
+						<span class="go-top"><i class="bi bi-arrow-up"></i></span>
+				</div>
 
         <!-- Inclusão do arquivo de footer -->
         <div class="footer-content">
@@ -16,7 +16,7 @@
 /* Estilo para o botão de voltar ao topo */
 .go-top-wrapper {
     position: fixed; /* Garante que o botão permaneça visível */
-
+    bottom: 20px; /* Ajuste conforme necessário */
     right: 20px; /* Ajuste conforme necessário */
     z-index: 1000; /* Garante que o botão fique acima de outros elementos */
 }
@@ -25,13 +25,22 @@
     cursor: pointer;
     background-color: #333; /* Cor de fundo do botão */
     color: white; /* Cor do ícone */
-
+    padding: 12px; /* Aumente o padding para um botão maior */
     border-radius: 50%;
-    font-size: 18px; /* Ajuste o tamanho do ícone */
+    font-size: 24px; /* Ajuste o tamanho do ícone */
     display: flex; /* Centraliza o ícone */
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona uma transição suave */
 }
+
+.go-top:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+/* Adicione a classe 'bi bi-arrow-up' no seu projeto se estiver usando o Bootstrap Icons */
 
 /* Estilo para o footer */
 footer {
