@@ -1,6 +1,11 @@
 <?php
 include_once('hms/include/config.php');
 
+// Carrega as traduções
+$translations = include 'translations.php';
+
+
+
 
 
 if (isset($_POST['submit'])) {
@@ -43,7 +48,7 @@ if (isset($_POST['submit'])) {
 
 
 <head>
-    <?php include 'translations.php'; ?>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $translations['Nome_app']; ?></title>
@@ -71,12 +76,12 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#about_us">About Us</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#contact_us">Contact Us</a></li>
-                            <li><a href="#logins">Logins</a></li>
+                            <li><a href="#"><?= $translations['home'] ?></a></li>
+                            <li><a href="#services"><?= $translations['services'] ?></a></li>
+                            <li><a href="#about_us"><?= $translations['about_us'] ?></a></li>
+                            <li><a href="#gallery"><?= $translations['gallery'] ?></a></li>
+                            <li><a href="#contact_us"><?= $translations['contact_us'] ?></a></li>
+                            <li><a href="#logins"><?= $translations['logins'] ?></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2 d-none d-lg-block appoint">
