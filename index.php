@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
         <div id="nav-head" class="header-nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-3  col-sm-12" style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;"><?= $translations['Sigla_app']; ?>
+                    <div class="col-lg-2 col-md-3  col-sm-12" style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;">HMS
                        <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
