@@ -1,8 +1,7 @@
 <?php
 include_once('hms/include/config.php');
 
-// Carrega as traduções
-$translations = include 'translations.php';
+
 
 
 
@@ -67,6 +66,11 @@ if (isset($_POST['submit'])) {
     <!-- ################# Header Starts Here#######################--->
 
       <header id="menu-jk">
+      <?php
+// Carrega as traduções
+$translations = include 'translations.php';
+?>
+
 
         <div id="nav-head" class="header-nav">
             <div class="container">
