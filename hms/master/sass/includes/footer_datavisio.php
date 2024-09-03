@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Inclui os arquivos necessários
-include_once $_SERVER['DOCUMENT_ROOT'] . '/translations.php'; // Ajuste conforme a estrutura do seu projeto
+$translations = include_once $_SERVER['DOCUMENT_ROOT'] . '/translations.php'; // Ajuste conforme a estrutura do seu projeto
 $custom = include_once $_SERVER['DOCUMENT_ROOT'] . '/hms/customization.php'; // Ajuste conforme a estrutura do seu projeto
 
 // Define um valor padrão para a cor de fundo, caso não esteja definido
