@@ -145,7 +145,7 @@ if (isset($_POST['submit'])) {
         <div class="container">
         <div class="inner-title">
 
-                <h2>Logins</h2>
+                <h2><?= $translations['logins']; ?></h2>
             </div>
             <div class="col-sm-12 blog-cont">
                 <div class="row no-margin">
@@ -408,7 +408,7 @@ while ($row=mysqli_fetch_array($ret)) {
                     <ul class="list-unstyled link-list">
                         <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li>
                         <li><a ui-sref="portfolio" href="#services">Services</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="products" href="#logins">Logins</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="products" href="#logins"><?= $translations['logins']; ?></a><i class="fa fa-angle-right"></i></li>
                         <li><a ui-sref="gallery" href="#gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
                         <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li>
                     </ul>
