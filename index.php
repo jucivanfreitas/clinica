@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
                         </ul>
                     </div>
                     <div class="col-sm-2 d-none d-lg-block appoint">
-                        <a class="btn btn-success" href="hms/user-login.php">Book an Appointment</a>
+                        <a class="btn btn-success" href="hms/user-login.php"><?= $translations['book_appointment'] ?></a>
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
                     <img class="d-block w-100" src="assets/images/slider/slider_2.jpg" alt="Second slide">
                     <div class="carousel-cover"></div>
                     <div class="carousel-caption vdg-cur d-none d-md-block">
-                        <h5 class="animated bounceInDown">Hospital Management System</h5>
+                        <h5 class="animated bounceInDown"><?= $translations['Nome_app']; ?></h5>
 
 
 
@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
                     <img class="d-block w-100" src="assets/images/slider/slider_3.jpg" alt="Third slide">
                       <div class="carousel-cover"></div>
                     <div class="carousel-caption vdg-cur d-none d-md-block">
-                        <h5 class="animated bounceInDown">Hospital Management System</h5>
+                        <h5 class="animated bounceInDown"><?= $translations['Nome_app']; ?></h5>
 
 
 
@@ -443,7 +443,7 @@ while ($row=mysqli_fetch_array($ret)) {
     </footer>
     <div class="copy">
             <div class="container">
-         Hospital Management System
+         <?= $translations['Nome_app']; ?>
 
 
             </div>
