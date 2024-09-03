@@ -95,7 +95,7 @@ return [
     'patient_login' => 'Login do Paciente',
 
     /* Utilize <?= $translations['doctor_login']; ?> para exibir a tradução correspondente */
-    'doctor_login' => 'Login do Médico',
+    'doctor_login' => 'Profissional',
 
     /* Utilize <?= $translations['admin_login']; ?> para exibir a tradução correspondente */
     'admin_login' => 'Login do Administrador',

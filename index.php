@@ -168,7 +168,7 @@ if (isset($_POST['submit'])) {
                                 <img src="assets/images/doctor.jpg" alt="">
 
                             <div class="blog-single-det">
-                                <h6>Doctors login</h6>
+                                <h6><?= $translations['doctor_login']; ?></h6>
                                 <a href="hms/doctor" target="_blank">
                                     <button class="btn btn-success btn-sm"><?= $translations['click_here']; ?></button>
                                 </a>
@@ -182,7 +182,7 @@ if (isset($_POST['submit'])) {
                                 <img src="assets/images/admin.jpg" alt="">
 
                             <div class="blog-single-det">
-                                <h6>Admin Login</h6>
+                                <h6><?= $translations['admin_login']; ?></h6>
 
                                 <a href="hms/admin" target="_blank">
                                     <button class="btn btn-success btn-sm"><?= $translations['click_here']; ?></button>
@@ -210,7 +210,7 @@ if (isset($_POST['submit'])) {
 
     <!-- ################# Our Departments Starts Here#######################--->
 
-
+<!--
     <section id="services" class="key-features department">
         <div class="container">
             <div class="inner-title">
@@ -275,7 +275,7 @@ if (isset($_POST['submit'])) {
 
     </section>
 
-
+--->
 
 
     <!--  ************************* About Us Starts Here ************************** -->
@@ -287,6 +287,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="col-sm-6 abut-yoiu">
                 <h3>About Our Hospital</h3>
+
 <?php
 $ret=mysqli_query($con,"select * from tblpage where PageType='aboutus' ");
 while ($row=mysqli_fetch_array($ret)) {

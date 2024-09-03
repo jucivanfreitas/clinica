@@ -50,7 +50,7 @@ $_SESSION['errmsg']="Invalid username or password";
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<h2>Admin Login</h2>
+				<h2><?= $translations['admin_login']; ?></h2>
 				</div>
 
 				<div class="box-login">
@@ -74,20 +74,20 @@ $_SESSION['errmsg']="Invalid username or password";
 									 </span>
 							</div>
 							<div class="form-actions">
-								
+
 								<button type="submit" class="btn btn-primary pull-right" name="submit">
 									Login <i class="fa fa-arrow-circle-right"></i>
 								</button>
 							</div>
 							<a href="../../index.php">Bacto Home Page</a>
-							
+
 						</fieldset>
 					</form>
 
 					<div class="copyright">
 						<span class="text-bold text-uppercase">Hospital Management System</span>
 					</div>
-			
+
 				</div>
 
 			</div>
@@ -99,7 +99,7 @@ $_SESSION['errmsg']="Invalid username or password";
 		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 		<script src="vendor/switchery/switchery.min.js"></script>
 		<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-	
+
 		<script src="assets/js/main.js"></script>
 
 		<script src="assets/js/login.js"></script>
@@ -109,7 +109,7 @@ $_SESSION['errmsg']="Invalid username or password";
 				Login.init();
 			});
 		</script>
-	
+
 	</body>
 	<!-- end: BODY -->
 </html>
