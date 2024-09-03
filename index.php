@@ -127,11 +127,11 @@ if (isset($_POST['submit'])) {
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="sr-only"><?= $translations['previous']; ?></span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="sr-only"><?= $translations['next']; ?></span>
             </a>
         </div>
 
@@ -155,9 +155,9 @@ if (isset($_POST['submit'])) {
                                 <img src="assets/images/patient.jpg" alt="">
 
                             <div class="blog-single-det">
-                                <h6>Patient Login</h6>
+                                <h6><?= $translations['patient_login']; ?></h6>
                                 <a href="hms/user-login.php" target="_blank">
-                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                    <button class="btn btn-success btn-sm"><?= $translations['click_here']; ?></button>
                                 </a>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ if (isset($_POST['submit'])) {
                             <div class="blog-single-det">
                                 <h6>Doctors login</h6>
                                 <a href="hms/doctor" target="_blank">
-                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                    <button class="btn btn-success btn-sm"><?= $translations['click_here']; ?></button>
                                 </a>
                             </div>
                         </div>
@@ -185,7 +185,7 @@ if (isset($_POST['submit'])) {
                                 <h6>Admin Login</h6>
 
                                 <a href="hms/admin" target="_blank">
-                                    <button class="btn btn-success btn-sm">Click Here</button>
+                                    <button class="btn btn-success btn-sm"><?= $translations['click_here']; ?></button>
                                 </a>
                             </div>
                         </div>
@@ -407,9 +407,9 @@ while ($row=mysqli_fetch_array($ret)) {
                     <h2>Useful Links</h2>
                     <ul class="list-unstyled link-list">
                         <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="portfolio" href="#services">Services</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="portfolio" href="#services"><?= $translations['services']; ?></a><i class="fa fa-angle-right"></i></li>
                         <li><a ui-sref="products" href="#logins"><?= $translations['logins']; ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="gallery" href="#gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="gallery" href="#gallery"><?= $translations['gallery']; ?></a><i class="fa fa-angle-right"></i></li>
                         <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li>
                     </ul>
                 </div>
