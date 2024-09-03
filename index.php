@@ -2,7 +2,7 @@
 include_once('hms/include/config.php');
 $translations = include 'translations.php';
 $custom = include  'customization.php';
-$footer = include 'hms/master/sass/includes/footer_datavisio.php';
+
 
 
 if (isset($_POST['submit'])) {
