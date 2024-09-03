@@ -1,7 +1,7 @@
 <?php
 // translations.php
 return [
-    'hospital_management_system' => 'Sistema de Gestão Hospitalar',
+    'Nome_app' => 'Sistema de Gestão Hospitalar',
     'home' => 'Início',
     'services' => 'Serviços',
     'about_us' => 'Sobre Nós',
