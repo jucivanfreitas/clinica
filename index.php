@@ -1,6 +1,6 @@
 <?php
 include_once('hms/include/config.php');
-//include 'translations.php';
+
 
 
 if (isset($_POST['submit'])) {
@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) {
 
 <!doctype html>
 <html lang="en">
+<?php include 'translations.php'; ?>
 
 <head>
     <meta charset="utf-8">
@@ -54,6 +55,8 @@ if (isset($_POST['submit'])) {
 </head>
 
     <body>
+
+
 
     <!-- ################# Header Starts Here#######################--->
 
