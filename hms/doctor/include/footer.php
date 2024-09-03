@@ -5,11 +5,12 @@
             <span class="go-top"><i class="ti-angle-up"></i></span>
         </div>
 
-        <!-- Inclusão do arquivo de footer -->
-        <div class="footer-content">
+
+    </div>
+		<!-- Inclusão do arquivo de footer -->
+		<div class="footer-content">
             <?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
         </div>
-    </div>
 </footer>
 
 <style>
