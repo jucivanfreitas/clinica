@@ -5,12 +5,11 @@
             <span class="go-top"><i class="ti-angle-up"></i></span>
         </div>
 
-
-    </div>
-		<!-- Inclusão do arquivo de footer -->
-		<div class="footer-content">
+        <!-- Inclusão do arquivo de footer -->
+        <div class="footer-content">
             <?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
         </div>
+    </div>
 </footer>
 
 <style>
@@ -34,15 +33,22 @@
     justify-content: center;
 }
 
-/* Estilo para o conteúdo do footer */
-.footer-inner {
-    text-align: center;
-    padding: 20px;
+/* Estilo para o footer */
+footer {
+    width: 100%; /* Faz o footer ocupar toda a largura da tela */
     background-color: #f8f9fa; /* Cor de fundo do footer */
 }
 
+.footer-inner {
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+/* Estilo para o conteúdo do footer */
 .footer-content {
     margin: 0 auto; /* Centraliza o conteúdo dentro do footer */
     max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
 </style>
