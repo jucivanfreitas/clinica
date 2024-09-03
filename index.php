@@ -434,17 +434,14 @@ while ($row=mysqli_fetch_array($ret)) {
 
         <div class="row justify-content-center align-items-center text-center pt-4">
 
-
-
-<!-- Inclua o footer -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
-
-
 </div>
 
     </div>
 </footer>
-
+<div>
+<!-- Inclua o footer -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
+</div>
 
 
     </body>
