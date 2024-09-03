@@ -1,0 +1,38 @@
+<?php
+// translations.php
+$translations = [
+    "Nome_app" => "Sistema de Gestão Hospitalar",
+    "Sigla_app"=>"ProntoPsi"
+    "home" => "Início",
+    "services" => "Serviços",
+    "about_us" => "Sobre Nós",
+    "gallery" => "Galeria",
+    "contact_us" => "Fale Conosco",
+    "logins" => "Entrar",
+    "book_an_appointment" => "Agendar Consulta",
+    "patient_login" => "Login do Paciente",
+    "doctor_login" => "Login do Médico",
+    "admin_login" => "Login do Administrador",
+    "our_key_features" => "Nossos Principais Recursos",
+    "cardiology" => "Cardiologia",
+    "orthopaedic" => "Ortopedia",
+    "neurologist" => "Neurologista",
+    "pharma_pipeline" => "Pipeline Farmacêutico",
+    "pharma_team" => "Equipe Farmacêutica",
+    "high_quality_treatments" => "Tratamentos de Alta Qualidade",
+    "about_our_hospital" => "Sobre Nosso Hospital",
+    "view_our_gallery" => "Veja Nossa Galeria",
+    "all" => "Todos",
+    "dental" => "Odontologia",
+    "cardiology" => "Cardiologia",
+    "neurology" => "Neurologia",
+    "laboratory" => "Laboratório",
+    "contact_form" => "Formulário de Contato",
+    "enter_name" => "Digite o Nome:",
+    "email_address" => "Endereço de E-mail:",
+    "mobile_number" => "Número de Telefone:",
+    "enter_message" => "Digite a Mensagem:",
+    "send_message" => "Enviar Mensagem",
+    "useful_links" => "Links Úteis",
+];
+?>

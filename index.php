@@ -1,23 +1,50 @@
 <?php
 include_once('hms/include/config.php');
-if(isset($_POST['submit']))
-{
-$name=$_POST['fullname'];
-$email=$_POST['emailid'];
-$mobileno=$_POST['mobileno'];
-$dscrption=$_POST['description'];
-$query=mysqli_query($con,"insert into tblcontactus(fullname,email,contactno,message) value('$name','$email','$mobileno','$dscrption')");
-echo "<script>alert('Your information succesfully submitted');</script>";
-echo "<script>window.location.href ='index.php'</script>";
+include 'translations.php';
 
-} ?>
+
+if (isset($_POST['submit'])) {
+    // Função para sanitizar entradas de texto, removendo caracteres indesejados
+    function sanitize_input($data) {
+        return htmlspecialchars(trim($data));
+    }
+
+    // Sanitiza os dados de entrada do usuário
+    $name = sanitize_input($_POST['fullname']);
+    $email = filter_var($_POST['emailid'], FILTER_SANITIZE_EMAIL); // Sanitiza o email
+    $mobileno = sanitize_input($_POST['mobileno']);
+    $description = sanitize_input($_POST['description']);
+
+    // Verifica se o email é válido
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('E-mail inválido!');</script>";
+        exit;
+    }
+
+    // Consulta preparada para evitar SQL Injection
+    $stmt = $con->prepare("INSERT INTO tblcontactus (fullname, email, contactno, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $mobileno, $description);
+
+    // Executa a consulta e verifica o resultado
+    if ($stmt->execute()) {
+        echo "<script>alert('Suas informações foram enviadas com sucesso!');</script>";
+        echo "<script>window.location.href ='index.php';</script>";
+    } else {
+        echo "<script>alert('Ocorreu um erro ao enviar suas informações. Tente novamente mais tarde.');</script>";
+    }
+
+    // Fecha a consulta preparada
+    $stmt->close();
+}
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Hospital management System </title>
+    <title><?= $translations['Nome_app']; ?></title>
 
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -35,21 +62,21 @@ echo "<script>window.location.href ='index.php'</script>";
         <div id="nav-head" class="header-nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-3  col-sm-12" style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;">HMS
+                    <div class="col-lg-2 col-md-3  col-sm-12" style="color:#000;font-weight:bold; font-size:42px; margin-top: 1% !important;"><?= $translations['Sigla_app']; ?>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#about_us">About Us</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#contact_us">Contact Us</a></li>
-                            <li><a href="#logins">Logins</a></li>
+                            <li><a href="#"><?= $translations['home']; ?></a></li>
+                            <li><a href="#services"><?= $translations['services']; ?></a></li>
+                            <li><a href="#about_us"><?= $translations['about_us']; ?></a></li>
+                            <li><a href="#gallery"><?= $translations['gallery']; ?></a></li>
+                            <li><a href="#contact_us"><?= $translations['contact_us']; ?></a></li>
+                            <li><a href="#logins"><?= $translations['logins']; ?></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2 d-none d-lg-block appoint">
-                        <a class="btn btn-success" href="hms/user-login.php">Book an Appointment</a>
+                    <a class="btn btn-success" href="hms/user-login.php"><?= $translations['book_an_appointment']; ?></a>
                     </div>
                 </div>
 
