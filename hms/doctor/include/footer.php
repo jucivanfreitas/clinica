@@ -35,20 +35,24 @@
 
 /* Estilo para o footer */
 footer {
+    position: fixed; /* Faz o footer fixo na parte inferior da tela */
+    bottom: 0; /* Alinha o footer na parte inferior */
+    left: 0; /* Alinha o footer na borda esquerda */
     width: 100%; /* Faz o footer ocupar toda a largura da tela */
     background-color: #f8f9fa; /* Cor de fundo do footer */
+    z-index: 1000; /* Garante que o footer fique acima de outros elementos */
 }
 
 .footer-inner {
-    padding: 0PX;
+    padding: 20px; /* Ajuste o padding conforme necessário */
     box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
 
 /* Estilo para o conteúdo do footer */
 .footer-content {
     margin: 0 auto; /* Centraliza o conteúdo dentro do footer */
-
     width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
+    max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
     box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
 </style>
