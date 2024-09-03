@@ -17,7 +17,7 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
 
 <div class="row justify-content-center align-items-center text-center pt-4" style="background-color: <?= htmlspecialchars($footerColor); ?>;>
     <!-- Seção de Redes Sociais -->
-    <div class="col-md-12"  padding: 10px; border-radius: 5px;">
+    <div class="col-md-12" style=" padding: 10px; border-radius: 5px;">
         <!-- Links para redes sociais -->
         <a href="#" class="text-white mx-2" aria-label="Facebook">
             <i class="bi bi-facebook"></i> <!-- Ícone do Facebook -->
