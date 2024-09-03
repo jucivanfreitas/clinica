@@ -299,7 +299,7 @@ while ($row=mysqli_fetch_array($ret)) {
     </section>
 
 
-            <!--  ************************* Gallery Starts Here ************************** -->
+            <!--  ************************* Gallery Starts Here **************************
         <div id="gallery" class="gallery">
            <div class="container">
               <div class="inner-title">
@@ -352,6 +352,7 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
        </div>
+       -->
         <!-- ######## Gallery End ####### -->
 
 
