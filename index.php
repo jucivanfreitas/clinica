@@ -434,14 +434,33 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
     </footer>
-    <div class="copy">
-            <div class="container">
-         <?= $translations['criado']; ?>
-
-
+    <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+                <p class="mb-0">
+                    &copy; <?= date('Y'); ?> <?= $translations['criado']; ?>. Todos os direitos reservados.
+                </p>
             </div>
-
+            <div class="col-md-6 text-md-end text-center">
+                <!-- Links para redes sociais ou navegação adicional -->
+                <a href="#" class="text-white mx-2">
+                    <i class="bi bi-facebook"></i> <!-- Ícone do Bootstrap Icons -->
+                </a>
+                <a href="#" class="text-white mx-2">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" class="text-white mx-2">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="text-white mx-2">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
         </div>
+    </div>
+</footer>
+
 
     </body>
 
