@@ -3,12 +3,14 @@
 
 <?php
 // hms\master\sass\includes\footer_datavisio.php
-// Inclui os arquivos necessários
-include_once $_SERVER['DOCUMENT_ROOT'] . '/translations.php'; // Certifique-se de que o caminho esteja correto
-include_once $_SERVER['DOCUMENT_ROOT'] . '/hms/customization.php'; // Certifique-se de que o caminho esteja correto
-//
+// Exibe erros para depuração
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Usa as variáveis de tradução e customização conforme necessário
+// Inclui os arquivos necessários
+include_once $_SERVER['DOCUMENT_ROOT'] . '/translations.php'; // Ajuste conforme a estrutura do seu projeto
+include_once $_SERVER['DOCUMENT_ROOT'] . '/hms/customization.php'; // Ajuste conforme a estrutura do seu projeto
+
 ?>
 
 <div class="row justify-content-center align-items-center text-center pt-4">
