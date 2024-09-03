@@ -25,7 +25,7 @@
     cursor: pointer;
     background-color: #333; /* Cor de fundo do botão */
     color: white; /* Cor do ícone */
-    padding: 10px;
+
     border-radius: 50%;
     font-size: 18px; /* Ajuste o tamanho do ícone */
     display: flex; /* Centraliza o ícone */
@@ -44,7 +44,7 @@ footer {
 }
 
 .footer-inner {
-    padding: 20px; /* Ajuste o padding conforme necessário */
+
     box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
 
