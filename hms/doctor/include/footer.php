@@ -47,7 +47,7 @@ footer {
 /* Estilo para o conteúdo do footer */
 .footer-content {
     margin: 0 auto; /* Centraliza o conteúdo dentro do footer */
-    max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+
     width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
     box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
