@@ -1,6 +1,7 @@
 <?php
 include_once('hms/include/config.php');
 $translations = include 'translations.php';
+$custom = include  'customization.php';
 
 if (isset($_POST['submit'])) {
     // Função para sanitizar entradas de texto, removendo caracteres indesejados
@@ -430,29 +431,32 @@ while ($row=mysqli_fetch_array($ret)) {
         </div>
 
         <div class="row justify-content-center align-items-center text-center pt-4">
-    <!-- Seção de Direitos Autorais -->
-    <div class="col-md-12 mb-3">
-        <p class="mb-0">
-            &copy; <?= date('Y'); ?> <?= $translations['criado']; ?>. Todos os direitos reservados.
-        </p>
-    </div>
+        <div class="col-md-12 mb-3" style="background-color: <?= $custom['footer_color']; ?>; padding: 10px; border-radius: 5px;">
+    <p class="mb-0 text-white">
 
-    <!-- Seção de Redes Sociais -->
-    <div class="col-md-12">
-        <!-- Links para redes sociais -->
-        <a href="#" class="text-white mx-2" aria-label="Facebook">
-            <i class="bi bi-facebook"></i> <!-- Ícone do Facebook -->
-        </a>
-        <a href="#" class="text-white mx-2" aria-label="Twitter">
-            <i class="bi bi-twitter"></i> <!-- Ícone do Twitter -->
-        </a>
-        <a href="#" class="text-white mx-2" aria-label="Instagram">
-            <i class="bi bi-instagram"></i> <!-- Ícone do Instagram -->
-        </a>
-        <a href="#" class="text-white mx-2" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i> <!-- Ícone do LinkedIn -->
-        </a>
-    </div>
+
+    <!-- Adiciona a cor do texto para melhor contraste -->
+        &copy; <?= date('Y'); ?> <?= $translations['criado']; ?>. Todos os direitos reservados.
+    </p>
+</div>
+
+<!-- Seção de Redes Sociais -->
+<div class="col-md-12" style="background-color: <?= $custom['footer_color']; ?>; padding: 10px; border-radius: 5px;">
+    <!-- Links para redes sociais -->
+    <a href="#" class="text-white mx-2" aria-label="Facebook">
+        <i class="bi bi-facebook"></i> <!-- Ícone do Facebook -->
+    </a>
+    <a href="#" class="text-white mx-2" aria-label="Twitter">
+        <i class="bi bi-twitter"></i> <!-- Ícone do Twitter -->
+    </a>
+    <a href="#" class="text-white mx-2" aria-label="Instagram">
+        <i class="bi bi-instagram"></i> <!-- Ícone do Instagram -->
+    </a>
+    <a href="#" class="text-white mx-2" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i> <!-- Ícone do LinkedIn -->
+    </a>
+</div>
+
 </div>
 
     </div>
