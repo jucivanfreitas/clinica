@@ -40,9 +40,10 @@ if (isset($_POST['submit'])) {
 
 <!doctype html>
 <html lang="en">
-<?php include 'translations.php'; ?>
+
 
 <head>
+    <?php include 'translations.php'; ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $translations['Nome_app']; ?></title>
