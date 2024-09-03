@@ -9,6 +9,7 @@ ini_set('display_errors', 1);
 // Inclui os arquivos necessários
 include_once $_SERVER['DOCUMENT_ROOT'] . '/translations.php'; // Ajuste conforme a estrutura do seu projeto
 include_once $_SERVER['DOCUMENT_ROOT'] . './././hms/customization.php'; // Ajuste conforme a estrutura do seu projeto
+include '../../../customization.php'
 
 // Define um valor padrão para a cor de fundo, caso não esteja definido
 $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF20D'; // Cinza escuro como padrão
@@ -16,12 +17,6 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
 ?>
 
 <div class="row justify-content-center align-items-center text-center pt-4">
-    <!-- Seção de Direitos Autorais -->
-    <div class="col-md-12 mb-3" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
-        <p class="mb-0 text-white">
-            &copy; <?= date('Y'); ?> <?= htmlspecialchars($translations['criado']); ?>. Todos os direitos reservados.
-        </p>
-    </div>
 
     <!-- Seção de Redes Sociais -->
     <div class="col-md-12" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
@@ -39,4 +34,12 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
             <i class="bi bi-linkedin"></i> <!-- Ícone do LinkedIn -->
         </a>
     </div>
+    <!-- Seção de Direitos Autorais -->
+    <div class="col-md-12 mb-3" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
+        <p class="mb-0 text-white">
+            &copy; <?= date('Y'); ?> <?= htmlspecialchars($translations['criado']); ?>. Todos os direitos reservados.
+        </p>
+    </div>
+
+
 </div>
