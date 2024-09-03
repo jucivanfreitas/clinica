@@ -355,7 +355,7 @@ while ($row=mysqli_fetch_array($ret)) {
         <!-- ######## Gallery End ####### -->
 
 
-     <!--  ************************* Contact Us Starts Here ************************** -->
+     <!--  ************************* Contact Us Starts Here **************************
 
     <section id="contact_us" class="contact-us-single">
         <div class="row no-margin">
@@ -393,7 +393,7 @@ while ($row=mysqli_fetch_array($ret)) {
         </div>
     </section>
 
-
+    -->
 
 
 
@@ -404,18 +404,9 @@ while ($row=mysqli_fetch_array($ret)) {
         <div class="container">
             <div class="row">
 
-                <div class="col-md-6 col-sm-12">
-                    <h2>Useful Links</h2>
-                    <ul class="list-unstyled link-list">
-                        <li><a ui-sref="about" href="#about">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="portfolio" href="#services"><?= $translations['services']; ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="products" href="#logins"><?= $translations['logins']; ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="gallery" href="#gallery"><?= $translations['gallery']; ?></a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="contact" href="#contact">Contact us</a><i class="fa fa-angle-right"></i></li>
-                    </ul>
-                </div>
+
                 <div class="col-md-6 col-sm-12 map-img">
-                    <h2>Contact Us</h2>
+                    <h2>Contato</h2>
                     <address class="md-margin-bottom-40">
 
 <?php
@@ -425,9 +416,9 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
                         <?php  echo $row['PageDescription'];?> <br>
-                        Phone: <?php  echo $row['MobileNumber'];?> <br>
-                        Email: <a href="mailto:<?php  echo $row['Email'];?>" class=""><?php  echo $row['Email'];?></a><br>
-                        Timing: <?php  echo $row['OpenningTime'];?>
+                        Fone: <?php  echo $row['MobileNumber'];?> <br>
+                        E-mail: <a href="mailto:<?php  echo $row['Email'];?>" class=""><?php  echo $row['Email'];?></a><br>
+                        Expediente: <?php  echo $row['OpenningTime'];?>
                     </address>
 
         <?php } ?>
