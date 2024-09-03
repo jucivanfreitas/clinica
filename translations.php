@@ -2,10 +2,10 @@
 // translations.php
 return [
     /* Utilize <?= $translations['Nome_app']; ?> para exibir a tradução correspondente */
-    'Nome_app' => 'Sistema de Gestão Hospitalar',
+    'Nome_app' => 'Atenciosamente PSI',
 
     /* Utilize <?= $translations['sigla']; ?> para exibir a tradução correspondente */
-    'sigla' => 'SGH',
+    'sigla' => 'Pronto Psi',
 
     /* Utilize <?= $translations['home']; ?> para exibir a tradução correspondente */
     'home' => 'Início',
