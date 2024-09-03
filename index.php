@@ -52,6 +52,8 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
      <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
 </head>
 
     <body>

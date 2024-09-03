@@ -10,7 +10,7 @@ return [
     /* Utilize <?= $translations['home']; ?> para exibir a tradução correspondente */
     'home' => 'Início',
      /* Utilize <?= $translations['criado']; ?> para exibir a tradução correspondente */
-     'criado' => '2024₢ DataVisio Consultoria de TI e Analise de Dados',
+     'criado' => 'DataVisio Consultoria de TI e Analise de Dados',
 
     /* Utilize <?= $translations['services']; ?> para exibir a tradução correspondente */
     'services' => 'Serviços',
