@@ -16,22 +16,22 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
 ?>
 
 <div class="row justify-content-center align-items-center text-center pt-4" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
-    <!-- Seção de Redes Sociais -->
+    <!-- Seção de Redes Sociais
     <div class="col-md-12 mb-3">
-        <!-- Links para redes sociais -->
+
         <a href="#" class="text-white mx-2" aria-label="Facebook">
-            <i class="bi bi-facebook"></i> <!-- Ícone do Facebook -->
+            <i class="bi bi-facebook"></i>
         </a>
         <a href="#" class="text-white mx-2" aria-label="Twitter">
-            <i class="bi bi-twitter"></i> <!-- Ícone do Twitter -->
+            <i class="bi bi-twitter"></i>
         </a>
         <a href="#" class="text-white mx-2" aria-label="Instagram">
-            <i class="bi bi-instagram"></i> <!-- Ícone do Instagram -->
+            <i class="bi bi-instagram"></i>
         </a>
         <a href="#" class="text-white mx-2" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i> <!-- Ícone do LinkedIn -->
+            <i class="bi bi-linkedin"></i>
         </a>
-    </div>
+    </div>-->
 
     <!-- Seção de Direitos Autorais -->
     <div class="col-md-12 mb-3">
