@@ -15,9 +15,9 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
 
 ?>
 
-<div class="row justify-content-center align-items-center text-center pt-4">
+<div class="row justify-content-center align-items-center text-center pt-4" style="background-color: <?= htmlspecialchars($footerColor); ?>;>
     <!-- Seção de Redes Sociais -->
-    <div class="col-md-12" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
+    <div class="col-md-12"  padding: 10px; border-radius: 5px;">
         <!-- Links para redes sociais -->
         <a href="#" class="text-white mx-2" aria-label="Facebook">
             <i class="bi bi-facebook"></i> <!-- Ícone do Facebook -->
@@ -34,7 +34,7 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
     </div>
 
     <!-- Seção de Direitos Autorais -->
-    <div class="col-md-12 mb-3" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
+    <div class="col-md-12 mb-3" style=" padding: 10px; border-radius: 5px;">
         <p class="mb-0 text-white">
             &copy; <?= date('Y'); ?> <?= htmlspecialchars($translations['criado']); ?>. Todos os direitos reservados.
         </p>
