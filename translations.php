@@ -2,6 +2,7 @@
 // translations.php
 return [
     'Nome_app' => 'Sistema de Gestão Hospitalar',
+    'sigla'=> 'SGH'
     'home' => 'Início',
     'services' => 'Serviços',
     'about_us' => 'Sobre Nós',
