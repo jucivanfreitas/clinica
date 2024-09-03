@@ -398,54 +398,46 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
 
-    <!-- ################# Footer Starts Here#######################--->
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-
-
-                <div class="col-md-6 col-sm-12 map-img">
-                    <h2>Contato</h2>
-                    <address class="md-margin-bottom-40">
-
-<?php
-$ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
-while ($row=mysqli_fetch_array($ret)) {
-?>
-
-
-                        <?php  echo $row['PageDescription'];?> <br>
-                        Fone: <?php  echo $row['MobileNumber'];?> <br>
-                        E-mail: <a href="mailto:<?php  echo $row['Email'];?>" class=""><?php  echo $row['Email'];?></a><br>
-                        Expediente: <?php  echo $row['OpenningTime'];?>
-                    </address>
-
-        <?php } ?>
-
-
-
-
-
-                </div>
+  <!-- ################# Footer Starts Here #######################-->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <!-- Contato -->
+            <div class="col-md-6 col-sm-12">
+                <h2 class="mb-4">Contato</h2>
+                <address class="mb-4">
+                    <?php
+                    $ret = mysqli_query($con, "select * from tblpage where PageType='contactus'");
+                    while ($row = mysqli_fetch_array($ret)) {
+                    ?>
+                        <p class="mb-2">
+                            <?= $row['PageDescription']; ?>
+                        </p>
+                        <p class="mb-2">
+                            Fone: <?= $row['MobileNumber']; ?>
+                        </p>
+                        <p class="mb-2">
+                            E-mail: <a href="mailto:<?= $row['Email']; ?>" class="text-white"><?= $row['Email']; ?></a>
+                        </p>
+                        <p class="mb-0">
+                            Expediente: <?= $row['OpenningTime']; ?>
+                        </p>
+                    <?php } ?>
+                </address>
             </div>
         </div>
 
-
-    </footer>
-    <footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+        <!-- Segunda parte do Footer com Copyright e Redes Sociais -->
+        <div class="row justify-content-center align-items-center text-center pt-4">
+            <div class="col-md-6">
                 <p class="mb-0">
                     &copy; <?= date('Y'); ?> <?= $translations['criado']; ?>. Todos os direitos reservados.
                 </p>
             </div>
-            <div class="col-md-6 text-md-end text-center">
-                <!-- Links para redes sociais ou navegação adicional -->
+            <div class="col-md-6">
+                <!-- Links para redes sociais -->
                 <a href="#" class="text-white mx-2">
-                    <i class="bi bi-facebook"></i> <!-- Ícone do Bootstrap Icons -->
+                    <i class="bi bi-facebook"></i>
                 </a>
                 <a href="#" class="text-white mx-2">
                     <i class="bi bi-twitter"></i>
@@ -460,6 +452,7 @@ while ($row=mysqli_fetch_array($ret)) {
         </div>
     </div>
 </footer>
+
 
 
     </body>
