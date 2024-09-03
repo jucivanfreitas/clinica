@@ -85,7 +85,8 @@ $_SESSION['errmsg']="Invalid username or password";
 					</form>
 
 					<div class="copyright">
-						<span class="text-bold text-uppercase">Hospital Management System</span>
+						<!-- Inclua o footer -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
 					</div>
 
 				</div>

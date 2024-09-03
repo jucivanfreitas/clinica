@@ -14,7 +14,7 @@ $footerColor = isset($custom['footer_color']) ? $custom['footer_color'] : '#DBF2
 ?>
 
 <!-- Adicione um container para limitar a largura do footer -->
-<div class="container-fluid" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius: 5px;">
+<div class="container-fluid" style="background-color: <?= htmlspecialchars($footerColor); ?>; padding: 10px; border-radius:1px;">
     <div class="row justify-content-center align-items-center text-center pt-4">
         <!-- Seção de Redes Sociais -->
         <!--
