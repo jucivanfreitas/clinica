@@ -436,7 +436,8 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
 
-
+<!-- Inclua o footer -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/hms/master/sass/includes/footer_datavisio.php'; ?>
 
 
 </div>
