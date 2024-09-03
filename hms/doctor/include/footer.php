@@ -16,7 +16,7 @@
 /* Estilo para o botão de voltar ao topo */
 .go-top-wrapper {
     position: fixed; /* Garante que o botão permaneça visível */
-    bottom: 10px; /* Ajuste conforme necessário */
+
     right: 20px; /* Ajuste conforme necessário */
     z-index: 1000; /* Garante que o botão fique acima de outros elementos */
 }
@@ -52,7 +52,7 @@ footer {
 .footer-content {
     margin: 0 auto; /* Centraliza o conteúdo dentro do footer */
     width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
-    max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+
     box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
 }
 </style>
