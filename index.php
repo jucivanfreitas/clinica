@@ -436,7 +436,7 @@ while ($row=mysqli_fetch_array($ret)) {
     </footer>
     <div class="copy">
             <div class="container">
-         <?= $translations['Nome_app']; ?>
+         <?= $translations['criado']; ?>
 
 
             </div>
